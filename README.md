@@ -14,19 +14,9 @@ This repository provides a **Docker Compose setup** for monitoring NVIDIA GPU me
 ### **1. Install `nvidia_gpu_exporter` on the Host**
 Follow the [installation guide](https://github.com/utkuozdemir/nvidia_gpu_exporter/blob/master/INSTALL.md):
 
-```sh
-wget https://github.com/utkuozdemir/nvidia_gpu_exporter/releases/latest/download/nvidia_gpu_exporter-linux-amd64
-chmod +x nvidia_gpu_exporter-linux-amd64
-sudo mv nvidia_gpu_exporter-linux-amd64 /usr/local/bin/nvidia_gpu_exporter
-```
+> All credits to utkuozdemir for his contributions to the community.
 
-Then, **start the exporter**:
-
-```sh
-nvidia_gpu_exporter --web.listen-address=":9835" &
-```
-
-Verify it's running:
+Verify `nvidia_gpu_exporter` running:
 
 ```sh
 curl http://localhost:9835/metrics
@@ -36,8 +26,8 @@ curl http://localhost:9835/metrics
 
 ### **2. Clone the Repository**
 ```sh
-git clone https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME
+git clone https://github.com/darwincastro/NVIDIA_Exporter_Grafana_Prometheus.git
+cd NVIDIA_Exporter_Grafana_Prometheus
 ```
 
 ---
