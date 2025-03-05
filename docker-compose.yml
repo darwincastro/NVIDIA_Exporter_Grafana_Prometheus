@@ -24,12 +24,3 @@ services:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=admin
     restart: unless-stopped
-
-  exporter:
-    image: prom/node-exporter:latest
-    container_name: node-exporter
-    network_mode: "host"
-    command:
-      - "--web.listen-address=:9835"
-    restart: unless-stopped
-
