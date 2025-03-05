@@ -28,8 +28,8 @@ services:
   exporter:
     image: prom/node-exporter:latest
     container_name: node-exporter
-    ports:
-      - "9835:9835"
+    network_mode: "host"
     command:
       - "--web.listen-address=:9835"
     restart: unless-stopped
+
