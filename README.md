@@ -59,6 +59,10 @@ This will start:
     ```
   - Ensure the `nvidia_gpu_exporter` service is running.
 
+**Verify the connection:**
+
+- Check if Prometheus is scraping the nvidia_gpu_exporter by going to http://<docker_host>:9090/targets.
+
 - **Prometheus shows exporter as `DOWN`?**
   - Edit `prometheus.yml`:
     ```yaml
